@@ -1,14 +1,6 @@
-# Shopmate - React Redux Toolkit E-Commerce Demo
+# Shopmate Redux Toolkit - React, Vite, TypeScript Fundamental Project 19
 
-<img width="1200" alt="Screenshot 2024-08-29 at 18 40 33" src="https://github.com/user-attachments/assets/af753049-ebc3-4af1-94c6-0e2c5d6bad19"> <img width="1200" alt="Screenshot 2024-08-29 at 18 41 16" src="https://github.com/user-attachments/assets/d9b8277e-8e02-4bda-bac3-15d430200507">
-
----
-
-## 🛒 Project Summary
-
-**Shopmate** is a fully functional demo E-Commerce web application built with React, Redux, and Redux Toolkit. The app demonstrates how to manage global state in a modern React application using Redux and Redux Toolkit, rather than `useContext` or `useReducer`. Shopmate features a responsive UI, dynamic routing, product listing, cart management, and stateful interactions, making it a great learning project for intermediate to advanced React developers. 
-
-- **Live-Demo:** [https://shopmate-redux-arnob.netlify.app](https://shopmate-redux-arnob.netlify.app)
+- **Live Demo:** []()
 
 ---
 
@@ -79,6 +71,7 @@ Shopmate--React-ReduxToolkit/
 ├── README.md
 └── ...
 ```
+
 > **Note:** For a detailed, up-to-date file listing, visit the [src directory on GitHub](https://github.com/arnobt78/Shopmate--React-ReduxToolkit/tree/main/src)
 
 ---
@@ -88,31 +81,37 @@ Shopmate--React-ReduxToolkit/
 ### Installation
 
 1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/arnobt78/Shopmate--React-ReduxToolkit.git
-    cd Shopmate--React-ReduxToolkit
-    ```
+
+   ```bash
+   git clone https://github.com/arnobt78/Shopmate--React-ReduxToolkit.git
+   cd Shopmate--React-ReduxToolkit
+   ```
 
 2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 3. **Install Node.js if you don't have it:**
-    - Download and install from [nodejs.org](https://nodejs.org/en/)
+   - Download and install from [nodejs.org](https://nodejs.org/en/)
 
 4. **(Optional) Install React Router:**
-    ```bash
-    npm install react-router-dom
-    ```
-    See more at [React Router Docs](https://reactrouter.com/en/main)
+
+   ```bash
+   npm install react-router-dom
+   ```
+
+   See more at [React Router Docs](https://reactrouter.com/en/main)
 
 5. **(Optional) Install Redux and Redux Toolkit:**
-    ```bash
-    npm install react-redux@8
-    npm install @reduxjs/toolkit
-    ```
-    See [Redux Toolkit docs](https://redux-toolkit.js.org/)
+
+   ```bash
+   npm install react-redux@8
+   npm install @reduxjs/toolkit
+   ```
+
+   See [Redux Toolkit docs](https://redux-toolkit.js.org/)
 
 ---
 
@@ -141,6 +140,7 @@ For advanced scripts and troubleshooting, see the [Create React App documentatio
 - **Provider**: Makes the Redux store available to nested components.
 
 **Workflow:**
+
 1. Create a slice: define name, initialState, and reducers.
 2. Export actions and reducers.
 3. Register reducers in `store.js`.
@@ -181,24 +181,30 @@ For advanced scripts and troubleshooting, see the [Create React App documentatio
 
 ```js
 // src/store/cartSlice.js
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
-  name: 'cart',
+  name: "cart",
   initialState: [],
   reducers: {
-    addToCart: (state, action) => { /* ... */ },
-    removeFromCart: (state, action) => { /* ... */ },
+    addToCart: (state, action) => {
+      /* ... */
+    },
+    removeFromCart: (state, action) => {
+      /* ... */
+    },
   },
 });
 
 export const { addToCart, removeFromCart } = cartSlice.actions;
 export default cartSlice.reducer;
 ```
+
 In your component:
+
 ```js
-import { useSelector, useDispatch } from 'react-redux';
-import { addToCart } from '../store/cartSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../store/cartSlice";
 
 const products = useSelector((state) => state.products);
 const dispatch = useDispatch();
@@ -216,9 +222,7 @@ const handleAdd = (product) => {
 
 ```js
 // In a ProductCard component
-<button onClick={() => dispatch(addToCart(product))}>
-  Add to Cart
-</button>
+<button onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
 ```
 
 #### Example: Selecting Cart State
@@ -230,13 +234,13 @@ const cartItems = useSelector((state) => state.cart);
 #### Example: Routing
 
 ```js
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 <Router>
   <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/cart" element={<CartPage />} />
   </Routes>
-</Router>
+</Router>;
 ```
 
 ---
