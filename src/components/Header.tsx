@@ -3,6 +3,7 @@ import { useAppSelector } from "../store/hooks";
 import "./Header.css";
 
 export function Header() {
+  // Header subscribes to cart size so the count updates instantly.
   const cartList = useAppSelector((state) => state.cartState.cartList);
 
   return (
@@ -11,6 +12,7 @@ export function Header() {
         <img src="/vite.svg" alt="Shopmate Logo" />
         <span>REDUX CART</span>
       </Link>
+      {/* NavLink adds active styling automatically for current route. */}
       <nav className="navigation">
         <NavLink to="/" className="link" end>
           Home

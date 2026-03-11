@@ -11,11 +11,13 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const dispatch = useAppDispatch();
   const cartList = useAppSelector((state) => state.cartState.cartList);
+  // Local UI flag to switch button label and action.
   const [isInCart, setIsInCart] = useState(false);
 
   const { id, name, price, image } = product;
 
   useEffect(() => {
+    // Recompute whenever cart changes so UI always reflects global state.
     const productInCart = cartList.find((item) => item.id === id);
     setIsInCart(Boolean(productInCart));
   }, [cartList, id]);
@@ -27,10 +29,12 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="action">
         <p>${price}</p>
         {isInCart ? (
+          // Removing dispatches a typed Redux action.
           <button className="remove" onClick={() => dispatch(remove(product))}>
             Remove
           </button>
         ) : (
+          // Adding dispatches a typed Redux action.
           <button onClick={() => dispatch(add(product))}>Add To Cart</button>
         )}
       </div>

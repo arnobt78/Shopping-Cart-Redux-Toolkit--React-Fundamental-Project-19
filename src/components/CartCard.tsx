@@ -16,6 +16,7 @@ export function CartCard({ product }: CartCardProps) {
       <img src={image} alt={name} />
       <p className="productName">{name}</p>
       <p className="productPrice">${price}</p>
+      {/* Removes this product from global cart state. */}
       <button onClick={() => dispatch(remove(product))}>Remove</button>
     </div>
   );
