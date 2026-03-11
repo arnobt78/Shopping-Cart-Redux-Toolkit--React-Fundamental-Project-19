@@ -9,7 +9,7 @@ export function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-        <img src="/assets/vite.svg" alt="Shopmate Logo" />
+        <img src="/vite.svg" alt="Shopmate Logo" />
         <span>REDUX CART</span>
       </Link>
       {/* NavLink adds active styling automatically for current route. */}
