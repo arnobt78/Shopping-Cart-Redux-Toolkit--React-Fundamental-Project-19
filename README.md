@@ -11,7 +11,8 @@ A beginner-friendly shopping cart demo built with modern frontend tooling and ar
 
 - **Live Demo:** [https://shopmate-redux-toolkit.vercel.app/](https://shopmate-redux-toolkit.vercel.app/)
 
----
+<img width="1534" height="947" alt="Screenshot 2026-03-11 at 16 36 25" src="https://github.com/user-attachments/assets/18efbf09-cabd-4c7c-afc8-64566b80e4a6" />
+<img width="1532" height="713" alt="Screenshot 2026-03-11 at 16 36 52" src="https://github.com/user-attachments/assets/7d9b737f-b104-4540-be91-779ee3e07971" />
 
 ## Project Summary
 
