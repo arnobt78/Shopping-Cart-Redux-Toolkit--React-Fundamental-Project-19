@@ -9,7 +9,15 @@ export function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-        <img src="/vite.svg" alt="Shopmate Logo" />
+        <span className="logoMark" aria-hidden="true">
+          <img
+            src="/vite.svg"
+            alt="Shopmate Logo"
+            width={44}
+            height={44}
+            fetchPriority="high"
+          />
+        </span>
         <span>REDUX CART</span>
       </Link>
       {/* NavLink adds active styling automatically for current route. */}
