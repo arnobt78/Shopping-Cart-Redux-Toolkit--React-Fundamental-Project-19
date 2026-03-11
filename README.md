@@ -1,4 +1,4 @@
-# Shopmate Redux Toolkit - React, Vite, TypeScript, Custom CSS Fundamental Project 19
+# Shopping Cart Redux Toolkit - React, Vite, TypeScript, Custom CSS Fundamental Project 19
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Vite](https://img.shields.io/badge/Vite-6.x-646CFF)](https://vitejs.dev/)
